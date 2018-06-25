@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>更多数据</title>
+		<link rel="stylesheet" href="css/myCss.css" />
+		<style>
+			@font-face{
+			  font-family:SourceHanSansCN;
+			  src:url(css/font/HYQiHei-50S.ttf);
+			}
+			*{font-family:SourceHanSansCN;}	
+		</style>
+		
+	</head>
+	<body style="background:#dcdcdc">
+		<div class="ToiletLeft">
+			<div class="detail moreDetail" style="display:block">
+				<div class="titleBox">厕所详情</div>
+				<div class="detailImg"><img src="img/Toilet.png"></div>
+				<ul class="detailDis">
+					<li><i class="iconfont">&#xe644;</i><span class="dark">编号：</span><span class="mLight">WC-01</span></li>
+					<li><i class="iconfont">&#xe6d4;</i><span class="dark">面积：</span><span class="mLight">80㎡</span></li>
+					<li><i class="iconfont">&#xe610;</i><span class="dark">地址：武汉市楚河汉街XX号</span></li>
+				</ul>
+				<ul class="imgDis" style="padding-top:10px;">
+					<li class="danger"><i class="iconfont dangerBg">&#xe697;</i><p class="dark">气味</p><p class="bLight">60</p><p class="mLight">紧急</p></li>
+					<li class="normal"><i class="iconfont">&#xe78c;</i><p class="dark">湿度</p><p class="bLight">20<span class="sLight">%</span></p><p class="mLight">正常</p></li>
+					<li class="warn"><i class="iconfont warnBg">&#xe767;</i><p class="dark">温度</p><p class="bLight">30<span class="sLight">C°</span></p><p class="mLight">预警</p></li>
+					<li class="normal"><i class="iconfont">&#xe605;</i><p class="dark">今日电量</p><p class="bLight">15<span class="sLight">kw/h</span></p><p class="mLight">正常</p></li>
+				</ul>
+				<hr class="line">
+				<ul class="imgDis" style="padding-bottom:10px;">
+					<li class="normal"><i class="iconfont">&#xe6ff;</i><p class="dark">今日用水</p><p class="bLight">2<span class="sLight">t</span></p><p class="mLight">正常</p></li>
+					<li class="normal"><i class="iconfont">&#xe606;</i><p class="dark">今日入厕数</p><p class="bLight">56<span class="sLight">kw/h</span></p><p class="mLight">正常</p></li>
+					<li class="normal"><i class="iconfont">&#xe602;</i><p class="dark">今日出厕数</p><p class="bLight">50<span class="sLight">kw/h</span></p><p class="mLight">正常</p></li>
+					<li class="normal"><i class="iconfont">&#xe6b6;</i><p class="dark">今日人数</p><p class="bLight">88<span class="sLight">位</span></p><p class="mLight">正常</p></li>
+				</ul>
+				<ul class="specificDescription">
+					<li><span class="title">管理部门：</span><span class="dark">XXX单位</span></li>
+					<li><span class="title">负责人：</span><span class="dark">小米</span></li>
+					<li><span class="title">联系方式：</span><span class="dark">188-XXXX-XXXX</span></li>
+					<li><span class="title">无障碍设施：</span><span class="dark">有</span></li>
+					<li><span class="title">家庭卫生间：</span><span class="dark">有</span></li>
+					<li><span class="title">收费情况：</span><span class="dark">免费</span></li>
+					<li><span class="title">开放时间：</span><span class="dark">6:00~22:00</span></li>
+					<li><span class="title">厕纸情况：</span><span class="dark">有</span></li>
+					<li><span class="title">其他功能：</span><span class="dark">WIFI</span></li>
+				</ul>
+				<p class="control"><a href="index.html">返回</a></p>
+			</div>
+	    </div>
+	    <div class="ToiletRight">
+	    	<ul class="ul">
+	    		<li class="li">
+	    			<div class="search"><span class="liner">实时数据</span><span class="grey">7天数据</span><span class="grey">30天数据</span></div>
+	    			<div id="smellEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe697;</i>气味</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：%</div>
+	    			<div id="humidityEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe78c;</i>湿度</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：C°</div>
+	    			<div id="weatherEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe767;</i>温度</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：kw/h</div>
+	    			<div id="powerEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe605;</i>今日电量</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：t</div>
+	    			<div id="waterEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe6ff;</i>今日用水</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：位</div>
+	    			<div id="inEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe606;</i>今日入厕数</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：位</div>
+	    			<div id="outEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe602;</i>今日出厕数</div>
+	    		</li>
+	    		<li class="li">
+	    			<div class="unit">单位：位</div>
+	    			<div id="personEchart" style="height:200px;width:100%"></div>
+	    			<hr>
+	    			<div class="type"><i class="iconfont">&#xe6b6;</i>今日人数</div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <script src="https://cdn.bootcss.com/echarts/4.0.2/echarts-en.common.js"></script>
+	    <script type="text/javascript" src="js/detail.js" ></script>
+	</body>
+</html>
